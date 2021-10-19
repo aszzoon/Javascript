@@ -10,16 +10,24 @@
 </head>
 
 
-<div class="alert-box" id="alert">Alert 박스
-  <button onclick>"document.getElementById('alert').style.display = 'none'; ">닫기
-  </button>
-  <button onclick="document.getElementById('alert').style.display = 'block'; ">버튼
+<div class="alert-box" id="alert">
+  <h1>Alert 박스
+  </h1>
+  <button onclick="알림창닫기()">닫기
   </button>
 </div>
 
+<button onclick="알림창열기()">버튼</button>
 
 <script>
 
+  function 알림창열기() {
+    document.getElementById('alert').style.display = 'block';
+  }
+
+  function 알림창닫기() {
+    document.getElementById('alert').style.display = 'none';
+  }
 
 
 </script>
