@@ -11,18 +11,24 @@
 
 
 <div class="alert-box" id="alert">
-  <h1>아이디를 입력하세요 </h1>
-  <button onclick="알림창닫기('none')">닫기</button>
+  <p id="title">아이디를 입력하세요 </p>
+  <button onclick="알림창열기('none')"> X </button>
 </div>
 
-<button onclick="알림창열기('block')">버튼1</button>
-<button onclick="알림창열기('block')">버튼2</button>
+<button onclick="알림창1열기('아이디입력해라')">버튼1</button>
+<button onclick="알림창2열기('패스워드입력해라')">버튼2</button>
 
 <script>
 
-  function 알림창열기() {
+  function 알림창1열기() {
+    document.getElementById('title').innerHTML = '구멍';
     document.getElementById('alert').style.display = 'block';
   }
+
+  // function 알림창2열기() {
+  //   document.getElementById('title').innerHTML = '패스워드를입력하세요';
+  //   document.getElementById('alert').style.display = 'block';
+  // }
 
 </script>
 
