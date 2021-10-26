@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    function sumInt(x, y) {
+      var isStrX = !isNaN(x);
+      var isStrY = !isNaN(y);
+
+      //둘 중 하나라고 숫자모양이 아니라면 실행을 중단하고 메세지를 리턴
+      if (!isStrX || !isStrY) {
+        return "숫자 형태이거나 숫자값이 전달되어야 합니다.";
+      }
+
+      var result = parseInt(x) + parseInt(y);
+      return result;
+    }
+
+    var sum1 = sumInt("a", 1);
+    var sum2 = sumInt("1", "2");
+    var sum3 = sumInt(100, "5.1");
+    var sum4 = sumInt(-1, "-100");
+
+    document.write("<h1>" + sum1 + "</h1>");
+    document.write("<h1>" + sum2 + "</h1>");
+    document.write("<h1>" + sum3 + "</h1>");
+    document.write("<h1>" + sum4 + "</h1>");
+  </script>
+</body>
+
+</html>
