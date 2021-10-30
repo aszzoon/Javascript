@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
-  
+  <script>
+    var people = {};
+
+    people.name = "주영아";
+    people.gender = "여자";
+
+    people.sayName = function () {
+      document.write("<h1>" + this.name + "</h1>");
+    };
+
+    people.sayGender = function () {
+      document.write("<h1>" + this.gender + "</h1>");
+    };
+
+    people.saySomething = function (msg) {
+      document.write("<h1>" + msg + "</h1>");
+    };
+
+    people.getName = function () {
+      return this.name;
+    };
+
+    people.getGender = function () {
+      return this.gender;
+    };
+
+    people.sayInfo = function () {
+      document.write("<h1>" + this.getName() + "님은 " + this.getGender() + " 입니다.</h1>");
+
+    };
+
+    people.sayName();
+    people.sayGender();
+    people.saySomething("Hello Javascript");
+    people.sayInfo();
+  </script>
 </body>
+
 </html>
